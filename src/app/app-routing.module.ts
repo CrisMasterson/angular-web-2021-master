@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { GruposComponent } from './grupos/grupos.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
+import { ModalComponent } from './modal/modal.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 
 const routes: Routes = [
@@ -41,4 +42,8 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  static COMPONENT_FACTORY=[
+    ModalComponent
+  ]
+}

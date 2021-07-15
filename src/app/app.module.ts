@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from  '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -14,6 +15,7 @@ import { enableProdMode } from '@angular/core';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { CarrouselComponent } from './carrousel/carrousel.component';
 import { FooterComponent } from './footer/footer.component';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,11 +34,14 @@ import { FooterComponent } from './footer/footer.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    
+    MatDialogModule,
+    BrowserAnimationsModule
+
   ],
-  providers:[
+  providers: [
     EventosService
   ],
+  entryComponents: [AppRoutingModule.COMPONENT_FACTORY],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
